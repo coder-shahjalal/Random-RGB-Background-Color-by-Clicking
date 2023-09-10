@@ -19,7 +19,11 @@ const btn = document.getElementById('change-btn');
 
 btn.addEventListener('click', function () {
     const bgColor = generateRGBColor();
-    root.style.backgroundColor = bgColor
+    root.style.backgroundColor = bgColor;
+    const btnColor = generateRGBColor();
+    btn.style.backgroundColor = btnColor;
+    document.getElementById('textt').style.color = btnColor
+
 })
 }
 
