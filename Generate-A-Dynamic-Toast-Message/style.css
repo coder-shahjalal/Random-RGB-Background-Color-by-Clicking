@@ -54,9 +54,7 @@ button:hover {
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
-  transition: background-color 0.6s;
 }
-
 .copy-btn {
   padding: 0.5rem 1.5rem;
   margin: 1rem 0;
@@ -77,10 +75,51 @@ button:hover {
   color: #f5f2f2;
   border: 1px solid #999999;
   transition: background-color 0.6s;
+  cursor: pointer;
 }
-
+.toast-message {
+  position: fixed;
+  z-index: 999;
+  top: 2rem;
+  right: 2rem;
+  background-color: rgb(19, 201, 110);
+  color: #000;
+  border: 1px solid #fff;
+  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.toast-message-slide-in {
+  animation: toast-message-slide-in 0.5s ease-in;
+}
+.toast-message-slide-out {
+  animation: toast-message-slide-out 0.5s ease-in;
+}
 h1 {
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
     1px 1px 0 #fff;
   text-align: center;
+}
+
+@keyframes toast-message-slide-in {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(8px);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-message-slide-out {
+  from {
+    transform: translateX(8px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(200px);
+    opacity: 0;
+  }
 }

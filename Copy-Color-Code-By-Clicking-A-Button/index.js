@@ -15,11 +15,11 @@ window.onload = () =>{
 function main(){
 
 const root = document.getElementById('root');
-const changeBtn = document.getElementById('change-btn');
+const btn = document.getElementById('change-btn');
 const output = document.getElementById('output');
 const copyBtn = document.getElementById('copy-btn');
 
-changeBtn.addEventListener('click', function () {
+btn.addEventListener('click', function () {
     const bgColor = generateRGBColor();
     root.style.backgroundColor = bgColor;
     output.value =bgColor
@@ -28,7 +28,9 @@ changeBtn.addEventListener('click', function () {
     
 
 })
-
+copyBtn.addEventListener('click',function(){
+    navigator.clipboard.writeText(output.value)
+})
 
 }
 
