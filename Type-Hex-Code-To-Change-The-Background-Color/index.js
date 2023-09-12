@@ -88,12 +88,12 @@ function generateToastMessage(msg){
 
 
 function isValidHex(color){
-if (color.length != 7) return false;
+if (color.length >=4 && color.length <=7 ) return true;
 if (color[0] != '#') return false;
 
 
 color = color.substring(1)
-return /^[0-9A-Fa-f]{6}$/i.test(color);
+return /^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$/i.test(color);
 }
 
 
