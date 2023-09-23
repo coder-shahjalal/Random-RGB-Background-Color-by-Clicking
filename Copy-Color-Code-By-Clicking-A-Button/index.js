@@ -1,6 +1,6 @@
 /*
 Project Requirements:
-Change the background color by generating random rbg color by clicking a button
+Change the background color by generating a random RBG color by clicking a button
 
 */
 
